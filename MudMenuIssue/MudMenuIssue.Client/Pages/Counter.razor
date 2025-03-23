@@ -1,0 +1,31 @@
+﻿@page "/counter"
+@rendermode InteractiveAuto
+
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<PageTitle>Counter</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">Counter</MudText>
+
+<MudText Class="mb-4">Current count: @currentCount</MudText>
+
+<MudMenu Label="Edit" Variant="Variant.Filled" Color="Color.Primary" AnchorOrigin="Origin.BottomLeft">
+    <MudMenuItem>
+        <MudButton>Test button</MudButton>
+    </MudMenuItem>
+
+    <MudMenuItem>
+        <MudButton>Test button</MudButton>
+    </MudMenuItem>
+</MudMenu>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
